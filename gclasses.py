@@ -28,11 +28,6 @@ class Gopen():
         folderid = folder['id']
         return folderid
 
-class Actions():
-    def __init__(self, arg):
-        superActions, (self).__init__()
-        self.arg = arg
-
 class Sanitize():
     def check_mail(self,email):
         regex = "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
