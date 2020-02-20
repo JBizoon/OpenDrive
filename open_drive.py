@@ -13,7 +13,6 @@ def parse_arguments():
 def main():
     args = parse_arguments()
     g = Gopen()
-    # a = Actions()
     drive = g.auth()
     if args.listening:
         drive = g.auth()
