@@ -9,13 +9,6 @@ import re
 import sys
 
 class Gopen():
-    # def __init__(self, drive,file,folderid,title):
-    #     self.drive = drive
-    #     self.file = file
-    #     self.folderid = folderid
-    #     self.title = title
-
-
     def auth(self):
         gauth = GoogleAuth()
         gauth.LocalWebserverAuth()
@@ -35,19 +28,12 @@ class Gopen():
         folderid = folder['id']
         return folderid
 
-
 class Actions():
     def __init__(self, arg):
         superActions, (self).__init__()
         self.arg = arg
 
-
-
 class Sanitize():
-                            # def __init__(self, arg):
-                            #     super(sanitize, self).__init__()
-                            #     self.arg = arg
-
     def check_mail(self,email):
         regex = "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
         if(re.search(regex,email)):
