@@ -1,7 +1,3 @@
-# save the credentials of your mail service inside mail.json
-# {"id":"email","password":"password" , "smtpserver": "smtpserver"}
-# For gmail: https://support.google.com/a/answer/7378726?hl=en
-
 from gclasses import *
 
 def parse_arguments():
