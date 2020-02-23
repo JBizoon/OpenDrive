@@ -27,6 +27,21 @@ class Gopen():
         folder.Upload()
         folderid = folder['id']
         return folderid
+    
+    #hardcode for now
+    def push(from_addr="from_addr", to_addr_list,
+              subject="Backup complete", message"Backup complete",
+              login"login", password="password",
+              smtpserver='[smtpserver]:[port]'):
+    header  = 'From: %s' % from_addr
+    header += 'To: %s' % ','.join(to_addr_list)
+    header += 'Subject: %s'
+    subjectmessage = header + message
+    server = smtplib.SMTP(smtpserver)
+    server.starttls()
+    server.login(login,password)
+    problems = server.sendmail(from_addr, to_addr_list, message)
+    server.quit()
 
 class Sanitize():
     def check_mail(self,email):
